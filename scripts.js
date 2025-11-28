@@ -23,3 +23,17 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+// your existing scripts.js code here
+// ...
+
+// Custom cursor glow
+document.addEventListener("DOMContentLoaded", function () {
+  const dot = document.createElement("div");
+  dot.className = "cursor-dot";
+  document.body.appendChild(dot);
+
+  window.addEventListener("mousemove", (e) => {
+    dot.style.left = e.clientX + "px";
+    dot.style.top = e.clientY + "px";
+  });
+});
